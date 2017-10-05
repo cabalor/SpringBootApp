@@ -18,7 +18,7 @@ public class BookController {
 		mod.addAttribute("book", formBook);	
 		return "added";
 		}else {
-			return "redirect:fail";
+			return "redirect:error";
 		}
 	}
 	

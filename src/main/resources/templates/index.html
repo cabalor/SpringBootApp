@@ -8,12 +8,12 @@
 <h1 th:text="${welcome}"></h1>
 <h1>In this site you can add a book to your library</h1>
 <form th:action="@{/add}" method="post">
-<p><label for="title"></label>
-<input id="title" type="text" th:field="${formBook.title}"></p><br>
-<p><label for="author"></label>
-<input id="author" type="text" th:field="${formBook.author}"></p><br>
-<p><label for="desc"></label>
-<textarea id="desc" th:field="${formBook.description}"></textarea></p><br>
+<p><label for="title">Title</label>
+<input id="title" type="text" th:field="${formBook.title}" placeholder="title"></p>
+<p><label for="author">Author</label>
+<input id="author" type="text" th:field="${formBook.author}" placeholder="author"></p>
+<div><label for="desc"></label>
+<textarea id="desc" th:field="${formBook.description}" placeholder="description" rows="10"></textarea></div>
 <p><input type="submit" value="Add"></p>
 </form>
 </body>
