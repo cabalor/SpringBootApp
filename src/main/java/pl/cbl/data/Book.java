@@ -24,7 +24,7 @@ public class Book {
 		this.description = description;
 	}
 	
-	Book(){}
+	public Book(){}
 	@Override
 	public String toString() {
 		return "Book [title=" + title + ", author=" + author + ", description=" + description + "]";
