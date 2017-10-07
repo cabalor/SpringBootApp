@@ -16,4 +16,10 @@ public class MainController {
 		return "index";
 	}
 	
+	@GetMapping("/loginform")
+	public String loginForm() {
+	    return "loginForm";
+	}
+	
+	
 }
