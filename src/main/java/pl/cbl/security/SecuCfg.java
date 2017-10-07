@@ -15,9 +15,8 @@ public class SecuCfg extends WebSecurityConfigurerAdapter{
         	
         	http.authorizeRequests().antMatchers("/")
         		.permitAll().anyRequest().authenticated()
-        		.and().formLogin().loginPage("/loginForm").permitAll()
-            .loginProcessingUrl("/process")
-                .permitAll()
+        		.and().formLogin().loginPage("/loginform").permitAll()
+            .loginProcessingUrl("/process").permitAll()
             .usernameParameter("user")
             .passwordParameter("password");
 	}
