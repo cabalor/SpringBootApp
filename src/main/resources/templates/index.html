@@ -16,5 +16,10 @@
 <textarea id="desc" th:field="${formBook.description}" placeholder="description" rows="10"></textarea></div>
 <p><input type="submit" value="Add"></p>
 </form>
+
+<form action="logout" th:action="@{/logout}" method="post">
+<input type="submit" value="Log out">
+</form>
+
 </body>
 </html>

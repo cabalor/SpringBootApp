@@ -18,7 +18,8 @@ public class SecuCfg extends WebSecurityConfigurerAdapter{
         		.and().formLogin().loginPage("/loginform").permitAll()
             .loginProcessingUrl("/process").permitAll()
             .usernameParameter("user")
-            .passwordParameter("password");
+            .passwordParameter("password").and().logout().logoutUrl("/logout").logoutSuccessUrl("/").permitAll();
+            
 	}
 	
 	@Override
