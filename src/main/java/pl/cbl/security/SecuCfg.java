@@ -13,12 +13,13 @@ public class SecuCfg extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
         	http.csrf().disable();
         	
-        	http.authorizeRequests().antMatchers("/")
+        	http.authorizeRequests().antMatchers("/start")
         		.permitAll().anyRequest().authenticated()
         		.and().formLogin().loginPage("/loginform").permitAll()
             .loginProcessingUrl("/process").permitAll()
             .usernameParameter("user")
-            .passwordParameter("password").and().logout().logoutUrl("/logout").logoutSuccessUrl("/").permitAll();
+            .passwordParameter("password").and()
+            .logout().logoutUrl("/logout").logoutSuccessUrl("/").permitAll();
             
 	}
 	
