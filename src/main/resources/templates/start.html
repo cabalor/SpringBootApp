@@ -6,9 +6,17 @@
 </head>
 <body>
 <h1 th:text="#{hello.msg}">nie wyswietle sie</h1>
+<p>you can add your favorite music album</p>
+<form th:action="@{/addAlbum}" th:object="${album}" method="post">
+   <p><input type="text" th:field="*{title}" placeholder="Title"/></p>
+   <p><input type="text" th:field="*{band}" placeholder="Band"/></p>
+   <p><input type="number" th:field="*{year}" placeholder="Year of release"/></p>
+   <p><input type="submit" value="Add" /></p>
+</form>
 
 
-<a href="index">dodaj ksiazke</a>
+
+<a href="index"><button>click this one and you will have oportunity to add a book</button></a>
 
 
 </body>
