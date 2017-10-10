@@ -13,11 +13,10 @@
    <p><input type="number" th:field="*{year}" placeholder="Year of release"/></p>
    <p><input type="submit" value="Add" /></p>
 </form>
-
-
-
-<a href="index"><button>click this one and you will have oportunity to add a book</button></a>
-
-
+<p th:if="${msg}" th:text="${msg}">Book</p>
+<ul>
+<li><a href="index"><button>click this one and you will have oportunity to add a book</button></a></li>
+<li><a th:href="@{/albums}">you can see albums here</a></li>
+</ul>
 </body>
 </html>
