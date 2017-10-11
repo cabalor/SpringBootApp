@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>All Books:</h1>
+    <h2>List</h2>
+    <ul th:remove="all-but-first">
+        <li th:each="alb: ${albums}" th:text="|${alb.title} - ${alb.band} (${alb.year})|">Alb1</li>
+        <li>alb2</li>
+        <li>alb3</li>
+    </ul>
+
+
+
+</body>
+</html>
