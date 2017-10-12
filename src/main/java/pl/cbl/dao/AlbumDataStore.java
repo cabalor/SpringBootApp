@@ -1,29 +1,34 @@
 package pl.cbl.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import pl.cbl.data.Book;
 import pl.cbl.data.MusicAlbum;
 
 @Component
 public class AlbumDataStore {
 
-	private List<MusicAlbum> lista;
-
-	public List<MusicAlbum> getLista() {
-		return lista;
-	}
-
-	public void setLista(List<MusicAlbum> lista) {
-		this.lista = lista;
-	}
 	
+	private List<Book> list = new ArrayList<>();
+		
 	
-	public void addAlbum(MusicAlbum music) {
-	lista.add(music);
-		
-		
+	public List<Book> getList() {
+		return list;
 	}
+
+	public void setList(List<Book> list) {
+		this.list = list;
+	}
+
+	
+	public void addBook(Book bk) {
+		list.add(bk);
+			
+			
+		}
+		
 	
 }

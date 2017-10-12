@@ -1,5 +1,7 @@
 package pl.cbl.data;
 
+
+
 public class MusicAlbum {
 
 	private String title;
