@@ -1,10 +1,13 @@
 package pl.cbl.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import pl.cbl.dao.AlbumDataStore;
 import pl.cbl.data.Book;
@@ -27,6 +30,14 @@ public class BookController {
 		}else {
 			return "redirect:error";
 		}
+	}
+	
+	@RequestMapping("/books")
+	public String showBooks(Model mod) {
+		List<Book> lista = ads.getList();
+		mod.addAttribute("books", lista);
+		return "books";
+		
 	}
 	
 	
