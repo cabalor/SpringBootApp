@@ -1,7 +1,8 @@
 package pl.cbl.data;
 
+import javax.persistence.Entity;
 
-
+@Entity
 public class MusicAlbum {
 
 	private String title;

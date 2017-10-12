@@ -9,7 +9,7 @@ import pl.cbl.data.Book;
 import pl.cbl.data.MusicAlbum;
 
 @Component
-public class AlbumDataStore {
+public class BookDataStore {
 
 	
 	private List<Book> list = new ArrayList<>();

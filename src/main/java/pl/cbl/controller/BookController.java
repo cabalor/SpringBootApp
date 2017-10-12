@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import pl.cbl.dao.AlbumDataStore;
+import pl.cbl.dao.BookDataStore;
 import pl.cbl.data.Book;
 
 @Controller
 public class BookController {
 	
 	@Autowired
-	private AlbumDataStore ads;
+	private BookDataStore ads;
 	
 	
 	@PostMapping("/add")
