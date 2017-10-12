@@ -10,6 +10,12 @@ import pl.cbl.data.Book;
 public class MainController {
 
 	
+	@GetMapping("/")
+	public String start() {
+		return "start";
+	}
+	
+	
 
 	@GetMapping("/index")
 	public String main(Model m) {
