@@ -20,14 +20,12 @@ public class BookController {
 	
 	
 	@PostMapping("/add")
-	public String addArticle(@ModelAttribute Book formBook, Model mod) {
-	
-		
+	public String addArticle(@ModelAttribute Book formBook, Model mod) { 
 		if(validNotEmpty(formBook)) {
 		mod.addAttribute("book", formBook);	
 		ads.addBook(formBook);
 		return "added";
-		}else {
+		} else {
 			return "redirect:error";
 		}
 	}

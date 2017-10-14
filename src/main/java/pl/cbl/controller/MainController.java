@@ -15,7 +15,6 @@ public class MainController {
 		return "start";
 	}
 	
-	
 
 	@GetMapping("/index")
 	public String main(Model m) {

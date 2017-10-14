@@ -4,15 +4,13 @@
 <meta charset="UTF-8">
 </head>
 <body>
-<h1>All Books:</h1>
-    <h2>List</h2>
-    <ul th:remove="all-but-first">
-        <li th:each="bk: ${books}" th:text="|${bk.title} - ${bk.author} - ${bk.description}">Alb1</li>
-        <li>book1</li>
-        <li>book2</li>
-    </ul>
-
-
-
+	<h1>All Books:</h1>
+	<h2>List</h2>
+	<ul th:remove="all-but-first">
+		<li th:each="bk: ${books}"
+			th:text="|${bk.title} - ${bk.author} - ${bk.description}">Alb1</li>
+		<li>book1</li>
+		<li>book2</li>
+	</ul>
 </body>
 </html>
