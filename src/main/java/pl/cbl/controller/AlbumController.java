@@ -1,5 +1,7 @@
 package pl.cbl.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,6 +31,11 @@ public class AlbumController {
         return "album";
     }
 	
-	
+	 @GetMapping("/showAlbum")
+	    public String showAll(Model model) {
+	        List<MusicAlbum> albums = albumR.findAll();
+	        model.addAttribute("all", albums);
+	        return "allAlbums";
+	    }
 	
 }
