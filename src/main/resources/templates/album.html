@@ -7,8 +7,13 @@
 <body>
 <h1 th:text="#{hello.msg}">nie wyswietle sie</h1>
 <p>you can add your favorite music album</p>
-
-
-
+<h1>Add Album</h1>
+    <form action="#" method="post" th:action="@{/saveAlbum}" th:object="${album}">
+        <p>Title: <input type="text" th:field="*{title}" /></p>
+        <p>Band: <input type="text" th:field="*{band}" /></p>
+        <p>Year: <input type="number" th:field="*{year}" /></p>
+        <input type="submit" value="Add" />
+    </form>
+    <a th:href="@{/showAlbum}">Show all times</a>
 </body>
 </html>

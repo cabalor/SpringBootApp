@@ -58,7 +58,6 @@ public class MusicAlbum {
 		year = newYear;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return "MusicAlbum [id=" + id + ", title=" + title + ", band=" + band + ", year=" + year + "]";
